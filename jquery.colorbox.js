@@ -189,7 +189,7 @@
         if (callback) $target.one(eventname, callback);
         $target.trigger(evt);
         
-        if (evt.namespace && evt.type.slice(0,prefix.length) !== prefix) {
+        if (evt.namespace && evt.type.slice(0,prefix.length) === prefix) {
             evt.namespace = '';
             $target.trigger(evt);
         }
